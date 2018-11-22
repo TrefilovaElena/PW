@@ -1,0 +1,49 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.0",
+    "signature": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.0": {
+      "PW.ViewModels/1.0.0": {
+        "dependencies": {
+          "PW.DataModel": "1.0.0"
+        },
+        "runtime": {
+          "PW.ViewModels.dll": {}
+        }
+      },
+      "PW.Common/1.0.0": {
+        "runtime": {
+          "PW.Common.dll": {}
+        }
+      },
+      "PW.DataModel/1.0.0": {
+        "dependencies": {
+          "PW.Common": "1.0.0"
+        },
+        "runtime": {
+          "PW.DataModel.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PW.ViewModels/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PW.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PW.DataModel/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

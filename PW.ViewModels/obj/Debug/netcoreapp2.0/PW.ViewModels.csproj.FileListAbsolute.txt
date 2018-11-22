@@ -1,0 +1,15 @@
+D:\Работа\тестовое задание2\PW\PW.ViewModels\bin\Debug\netcoreapp2.0\PW.ViewModels.deps.json
+D:\Работа\тестовое задание2\PW\PW.ViewModels\bin\Debug\netcoreapp2.0\PW.ViewModels.dll
+D:\Работа\тестовое задание2\PW\PW.ViewModels\bin\Debug\netcoreapp2.0\PW.ViewModels.pdb
+D:\Работа\тестовое задание2\PW\PW.ViewModels\obj\Debug\netcoreapp2.0\PW.ViewModels.csprojResolveAssemblyReference.cache
+D:\Работа\тестовое задание2\PW\PW.ViewModels\obj\Debug\netcoreapp2.0\PW.ViewModels.csproj.CoreCompileInputs.cache
+D:\Работа\тестовое задание2\PW\PW.ViewModels\obj\Debug\netcoreapp2.0\PW.ViewModels.AssemblyInfoInputs.cache
+D:\Работа\тестовое задание2\PW\PW.ViewModels\obj\Debug\netcoreapp2.0\PW.ViewModels.AssemblyInfo.cs
+D:\Работа\тестовое задание2\PW\PW.ViewModels\obj\Debug\netcoreapp2.0\PW.ViewModels.dll
+D:\Работа\тестовое задание2\PW\PW.ViewModels\obj\Debug\netcoreapp2.0\PW.ViewModels.pdb
+D:\Работа\тестовое задание2\PW\PW.ViewModels\bin\Debug\netcoreapp2.0\PW.Common.dll
+D:\Работа\тестовое задание2\PW\PW.ViewModels\bin\Debug\netcoreapp2.0\PW.DataModel.dll
+D:\Работа\тестовое задание2\PW\PW.ViewModels\bin\Debug\netcoreapp2.0\Microsoft.EntityFrameworkCore.dll
+D:\Работа\тестовое задание2\PW\PW.ViewModels\bin\Debug\netcoreapp2.0\PW.DataModel.pdb
+D:\Работа\тестовое задание2\PW\PW.ViewModels\bin\Debug\netcoreapp2.0\PW.Common.pdb
+D:\Работа\тестовое задание2\PW\PW.ViewModels\bin\Debug\netcoreapp2.0\Microsoft.EntityFrameworkCore.xml

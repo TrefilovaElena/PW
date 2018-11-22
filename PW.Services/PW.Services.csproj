@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Implementations\AccountService.cs~RF136d988a.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PW.DataAccess\PW.DataAccess.csproj" />
+    <ProjectReference Include="..\PW.DataModel\PW.DataModel.csproj" />
+    <ProjectReference Include="..\PW.ViewModels\PW.ViewModels.csproj" />
+  </ItemGroup>
+
+</Project>

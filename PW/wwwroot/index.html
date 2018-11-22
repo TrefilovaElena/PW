@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>PW</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/themes/sunny/jquery-ui.css">
+
+</head>
+<body>
+
+    <div class="container">
+        <span class="errors"></span>
+        <form id="registrationForm">
+            <h3>Registration to PW</h3>
+            <div class="form-group">
+                <label for="nameRegistration">Name:</label>
+                <input id="nameRegistration" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="emailRegistration">Email:</label><br />
+                <input type="email" id="emailRegistration" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="passwordRegistration">Password:</label><br />
+                <input type="password" id="passwordRegistration" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="confirmPasswordRegistration">Confirm password:</label><br />
+                <input type="password" id="confirmPasswordRegistration" class="form-control" />
+            </div>
+            <div class="panel-body">
+                <input type="submit" id="submitRegistration" value="Registration" class="btn btn-sm btn-primary" />
+                <input type="button" id="gotoLogin" value="Log on PW" class="btn btn-link" onclick="ShowForm('#loginForm');" />
+            </div>
+        </form>
+
+        <form id="loginForm">
+            <h3>Login to PW</h3>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="emailLogin" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="passwordLogin" class="form-control" />
+            </div>
+            <div class="panel-body">
+                <input type="submit" id="submitLogin" value="Login" class="btn btn-sm btn-primary" />
+                <input type="button" id="registration" value="Register on PW" class="btn btn-link" />
+
+            </div>
+        </form>
+        <form id="mainForm">
+
+            <div class="container">
+                <div class="header">
+                    <span class="pull-right">
+                        <input type="button" value="LogOut" id="logOut" class="btn btn-sm btn-primary" />
+                    </span>
+                    <input type="hidden" name="userId" id="userId" />
+                    <div class="userInfo">
+
+                        <h3 class="text-muted"> <span class="userName"></span>: current balance is <span class="currentBalance"></span></h3>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="form-group">
+                    <h2>Create new transaction to:</h2>
+
+                    <div class="ui-widget">
+                        <input type="hidden" name="selectedUserId" id="selectedUserId" />
+                        <label for="users">Recipient:</label>
+                        <input id="users" /><br>
+                        <label for="amount">Amount:</label> <input id="amount" />
+                        <input type="button" value="Create new transaction" id="newTransactionBtn" class="btn btn-lg btn-primary" />
+                    </div>
+
+                </div>
+            </div>
+            <h2>Transactions</h2>
+            <table class="table table-condensed table-striped table-bordered">
+                <thead><tr><th>Payee</th><th>Recipient</th><th>Amount</th><th>Balance</th><th>TimeOfTransaction</th></tr></thead>
+                <tbody></tbody>
+            </table>
+
+        </form>
+
+
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="//ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/jquery-ui.min.js"></script>
+    <script src="js/signalr.min.js"></script>
+    <script src="js/pwcommon.js"></script>
+   
+</body>
+</html>

@@ -1,0 +1,103 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\Web\\External\\Node.exe',
+1 verbose cli   'C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\Web\\External\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install' ]
+2 info using npm@3.3.4
+3 info using node@v5.4.1
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly install normalizeTree
+8 silly loadCurrentTree Finishing
+9 silly loadIdealTree Starting
+10 silly install loadIdealTree
+11 silly cloneCurrentTree Starting
+12 silly install cloneCurrentTreeToIdealTree
+13 silly cloneCurrentTree Finishing
+14 silly loadShrinkwrap Starting
+15 silly install loadShrinkwrap
+16 silly loadShrinkwrap Finishing
+17 silly loadAllDepsIntoIdealTree Starting
+18 silly install loadAllDepsIntoIdealTree
+19 silly fetchNamedPackageData @aspnet/signalr
+20 silly mapToRegistry name @aspnet/signalr
+21 silly mapToRegistry scope (from package name) @aspnet
+22 verbose mapToRegistry no registry URL found in name for scope @aspnet
+23 silly mapToRegistry using default registry
+24 silly mapToRegistry registry https://registry.npmjs.org/
+25 silly mapToRegistry uri https://registry.npmjs.org/@aspnet%2fsignalr
+26 verbose request uri https://registry.npmjs.org/@aspnet%2fsignalr
+27 verbose request no auth needed
+28 info attempt registry request try #1 at 23:41:38
+29 verbose request id 2eef545180046335
+30 verbose etag W/"acd63ab42313488d1be08f53762abb5e"
+31 verbose lastModified Wed, 17 Oct 2018 15:33:05 GMT
+32 http request GET https://registry.npmjs.org/@aspnet%2fsignalr
+33 http 304 https://registry.npmjs.org/@aspnet%2fsignalr
+34 verbose headers { date: 'Tue, 20 Nov 2018 18:41:42 GMT',
+34 verbose headers   connection: 'keep-alive',
+34 verbose headers   'set-cookie': [ '__cfduid=d6853eb6ef6b6e31f10e7401b3747b0d11542739302; expires=Wed, 20-Nov-19 18:41:42 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+34 verbose headers   'cf-cache-status': 'HIT',
+34 verbose headers   'cache-control': 'public, max-age=300',
+34 verbose headers   'cf-ray': '47cd0d5e39d04e42-DME',
+34 verbose headers   etag: '"acd63ab42313488d1be08f53762abb5e"',
+34 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+34 verbose headers   'last-modified': 'Wed, 17 Oct 2018 15:33:05 GMT',
+34 verbose headers   vary: 'Accept-Encoding',
+34 verbose headers   'x-amz-meta-rev': '16-eb5ff3d48db1e7312bb3c4b3a0884e10',
+34 verbose headers   server: 'cloudflare' }
+35 silly get cb [ 304,
+35 silly get   { date: 'Tue, 20 Nov 2018 18:41:42 GMT',
+35 silly get     connection: 'keep-alive',
+35 silly get     'set-cookie': [ '__cfduid=d6853eb6ef6b6e31f10e7401b3747b0d11542739302; expires=Wed, 20-Nov-19 18:41:42 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+35 silly get     'cf-cache-status': 'HIT',
+35 silly get     'cache-control': 'public, max-age=300',
+35 silly get     'cf-ray': '47cd0d5e39d04e42-DME',
+35 silly get     etag: '"acd63ab42313488d1be08f53762abb5e"',
+35 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+35 silly get     'last-modified': 'Wed, 17 Oct 2018 15:33:05 GMT',
+35 silly get     vary: 'Accept-Encoding',
+35 silly get     'x-amz-meta-rev': '16-eb5ff3d48db1e7312bb3c4b3a0884e10',
+35 silly get     server: 'cloudflare' } ]
+36 verbose etag https://registry.npmjs.org/@aspnet%2fsignalr from cache
+37 verbose get saving @aspnet/signalr to C:\Users\User\AppData\Roaming\npm-cache\registry.npmjs.org\_40aspnet_252fsignalr\.cache.json
+38 silly fetchPackageMetaData Error: No compatible version found: @aspnet/signalr@^4.0.2
+38 silly fetchPackageMetaData Valid install targets:
+38 silly fetchPackageMetaData ["1.1.0-preview3-35497","1.1.0-preview2-35157","1.1.0-preview1-35029","1.0.4","1.0.3","1.0.2","1.0.0","1.0.0-rc1-update1","1.0.0-rc1-final","1.0.0-preview2-final","1.0.0-preview1-update1","1.0.0-preview1-final"]
+38 silly fetchPackageMetaData
+38 silly fetchPackageMetaData     at pickVersionFromRegistryDocument (C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Web\External\node_modules\npm\lib\fetch-package-metadata.js:146:16)
+38 silly fetchPackageMetaData     at C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Web\External\node_modules\iferr\index.js:13:50
+38 silly fetchPackageMetaData     at C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Web\External\node_modules\npm\lib\utils\pulse-till-done.js:19:8
+38 silly fetchPackageMetaData     at saved (C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Web\External\node_modules\npm\lib\cache\caching-client.js:168:7)
+38 silly fetchPackageMetaData     at C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Web\External\node_modules\npm\node_modules\graceful-fs\polyfills.js:210:7
+38 silly fetchPackageMetaData     at FSReqWrap.oncomplete (fs.js:82:15)
+38 silly fetchPackageMetaData  error for @aspnet/signalr@^4.0.2 [Error: No compatible version found: @aspnet/signalr@^4.0.2
+38 silly fetchPackageMetaData Valid install targets:
+38 silly fetchPackageMetaData ["1.1.0-preview3-35497","1.1.0-preview2-35157","1.1.0-preview1-35029","1.0.4","1.0.3","1.0.2","1.0.0","1.0.0-rc1-update1","1.0.0-rc1-final","1.0.0-preview2-final","1.0.0-preview1-update1","1.0.0-preview1-final"]
+38 silly fetchPackageMetaData ]
+39 silly rollbackFailedOptional Starting
+40 silly rollbackFailedOptional Finishing
+41 silly runTopLevelLifecycles Starting
+42 silly runTopLevelLifecycles Finishing
+43 silly install printInstalled
+44 verbose stack Error: No compatible version found: @aspnet/signalr@^4.0.2
+44 verbose stack Valid install targets:
+44 verbose stack ["1.1.0-preview3-35497","1.1.0-preview2-35157","1.1.0-preview1-35029","1.0.4","1.0.3","1.0.2","1.0.0","1.0.0-rc1-update1","1.0.0-rc1-final","1.0.0-preview2-final","1.0.0-preview1-update1","1.0.0-preview1-final"]
+44 verbose stack
+44 verbose stack     at pickVersionFromRegistryDocument (C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Web\External\node_modules\npm\lib\fetch-package-metadata.js:146:16)
+44 verbose stack     at C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Web\External\node_modules\iferr\index.js:13:50
+44 verbose stack     at C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Web\External\node_modules\npm\lib\utils\pulse-till-done.js:19:8
+44 verbose stack     at saved (C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Web\External\node_modules\npm\lib\cache\caching-client.js:168:7)
+44 verbose stack     at C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Web\External\node_modules\npm\node_modules\graceful-fs\polyfills.js:210:7
+44 verbose stack     at FSReqWrap.oncomplete (fs.js:82:15)
+45 verbose cwd D:\Работа\тестовое задание2\PW\PW
+46 error Windows_NT 10.0.17134
+47 error argv "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\Web\\External\\Node.exe" "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\Web\\External\\node_modules\\npm\\bin\\npm-cli.js" "install"
+48 error node v5.4.1
+49 error npm  v3.3.4
+50 error No compatible version found: @aspnet/signalr@^4.0.2
+50 error Valid install targets:
+50 error ["1.1.0-preview3-35497","1.1.0-preview2-35157","1.1.0-preview1-35029","1.0.4","1.0.3","1.0.2","1.0.0","1.0.0-rc1-update1","1.0.0-rc1-final","1.0.0-preview2-final","1.0.0-preview1-update1","1.0.0-preview1-final"]
+51 error If you need help, you may report this error at:
+51 error     <https://github.com/npm/npm/issues>
+52 verbose exit [ 1, true ]

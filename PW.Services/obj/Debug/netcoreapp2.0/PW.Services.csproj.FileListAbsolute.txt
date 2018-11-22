@@ -1,0 +1,17 @@
+D:\Работа\тестовое задание2\PW\PW.Services\bin\Debug\netcoreapp2.0\PW.Services.deps.json
+D:\Работа\тестовое задание2\PW\PW.Services\bin\Debug\netcoreapp2.0\PW.Services.dll
+D:\Работа\тестовое задание2\PW\PW.Services\bin\Debug\netcoreapp2.0\PW.Common.dll
+D:\Работа\тестовое задание2\PW\PW.Services\bin\Debug\netcoreapp2.0\PW.DataModel.dll
+D:\Работа\тестовое задание2\PW\PW.Services\bin\Debug\netcoreapp2.0\PW.ViewModels.dll
+D:\Работа\тестовое задание2\PW\PW.Services\bin\Debug\netcoreapp2.0\PW.DataModel.pdb
+D:\Работа\тестовое задание2\PW\PW.Services\bin\Debug\netcoreapp2.0\PW.ViewModels.pdb
+D:\Работа\тестовое задание2\PW\PW.Services\bin\Debug\netcoreapp2.0\PW.Common.pdb
+D:\Работа\тестовое задание2\PW\PW.Services\obj\Debug\netcoreapp2.0\PW.Services.csprojResolveAssemblyReference.cache
+D:\Работа\тестовое задание2\PW\PW.Services\obj\Debug\netcoreapp2.0\PW.Services.csproj.CoreCompileInputs.cache
+D:\Работа\тестовое задание2\PW\PW.Services\obj\Debug\netcoreapp2.0\PW.Services.AssemblyInfoInputs.cache
+D:\Работа\тестовое задание2\PW\PW.Services\obj\Debug\netcoreapp2.0\PW.Services.AssemblyInfo.cs
+D:\Работа\тестовое задание2\PW\PW.Services\bin\Debug\netcoreapp2.0\PW.Services.pdb
+D:\Работа\тестовое задание2\PW\PW.Services\obj\Debug\netcoreapp2.0\PW.Services.dll
+D:\Работа\тестовое задание2\PW\PW.Services\obj\Debug\netcoreapp2.0\PW.Services.pdb
+D:\Работа\тестовое задание2\PW\PW.Services\bin\Debug\netcoreapp2.0\PW.DataAccess.dll
+D:\Работа\тестовое задание2\PW\PW.Services\bin\Debug\netcoreapp2.0\PW.DataAccess.pdb

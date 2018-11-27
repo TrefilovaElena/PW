@@ -10,7 +10,6 @@ namespace PW.DataModel.Entities
         public int Id { get; set; }
         public int RecipientId { get; set; }
         public virtual Account Recipient { get; set; }
-        [Required]
         public int PayeeId { get; set; }
         public virtual Account Payee { get; set; }
         [Required]

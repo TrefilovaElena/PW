@@ -100,7 +100,8 @@ namespace PW.Services
             decimal FirstSumOnBalance = 500;
             try
             {
-                _accountService.CreateTransaction(DbInitializer.SystemAccount.UserId, recipient.Id, FirstSumOnBalance);
+                int systemUserId = _accountService.GetSystemAccount().UserId;
+                _accountService.CreateTransaction(systemUserId, recipient.Id, FirstSumOnBalance);
 
                 return $"Your Balance is {FirstSumOnBalance}";
             }

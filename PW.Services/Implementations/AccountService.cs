@@ -13,8 +13,6 @@ namespace PW.Services
 {
     public class AccountService : IAccountService
     {
-        public event AccountStateHandler CreateAccount;
-        public event AccountStateHandler FailedCreatingAccount;
 
         PWContext db;
 
@@ -28,21 +26,7 @@ namespace PW.Services
 
         }
 
-        private void CallEvent(AccountEventArgs e, AccountStateHandler handler)
-        {
-            if (handler != null && e != null)
-                handler(this, e);
-        }
-
-        protected virtual void OnCreateAccount(AccountEventArgs e)
-        {
-            CallEvent(e, CreateAccount);
-        }
-        protected virtual void OnFailedCreatingAccount(AccountEventArgs e)
-        {
-            CallEvent(e, FailedCreatingAccount);
-        }
-
+   
         public decimal GetBalanceofAccount(int accountId)
         {
             Account entity = db.Accounts.FirstOrDefault(o => o.Id == accountId);
@@ -87,18 +71,65 @@ namespace PW.Services
                 return (null, "Transaction is not succeed: Recipient does not exist.");
             }
             Account payee = GetAccountOfUser(payeeUserId);
-            if ((payee.Id != DbInitializer.SystemAccount.Id) && (payee.Balance < amount))
+            if ((payee.Id != GetSystemAccount().Id) && (payee.Balance < amount))
             {
-                OnFailedCreatingAccount(new AccountEventArgs("Transaction is not succeed: transaction amount is greater than the current balance."));
                 return (null, "Transaction is not succeed: transaction amount is greater than the current balance.");
             }
- 
+            //1. вариант без транзакций---------------------------
 
-            recipient.Balance = recipient.Balance + amount;
-            payee.Balance = payee.Balance - amount;
-            db.SaveChanges();
-            AccountTransaction accountTransaction =_accountTransactionService.Add(payee, recipient, amount);
-            /*  using (SqlConnection connection = new SqlConnection(""))//ConfigurationManager.ConnectionStrings["MyDatabase"].ConnectionString))
+                    recipient.Balance = recipient.Balance + amount;
+                    payee.Balance = payee.Balance - amount;
+                    db.SaveChanges();
+                    AccountTransaction accountTransaction =_accountTransactionService.Add(payee, recipient, amount);
+            //-----------------------------------
+            //2. вариант с хранимой процедурой----------------------
+            /* using (SqlConnection connection = new SqlConnection(""))//ConfigurationManager.ConnectionStrings["MyDatabase"].ConnectionString))
+            CREATE PROCEDURE AddTransaction
+     @payeeUserId int,
+     @recipientUserId int,
+     @amount float,
+     @TransactionId int out
+ AS
+ DECLARE  @payeeBalance int,
+          @recipientBalance int,
+          @payeeAccountId int,
+          @recipientAccountId int
+
+ BEGIN TRANSACTION
+ select @payeeBalance=Balance-@amount,
+        @payeeAccountId=Id 
+ from [dbo].[Accounts]
+ where  [dbo].[Accounts].UserId=@payeeUserId
+
+ select @recipientBalance=Balance+@amount,
+        @recipientAccountId=Id  
+ from [dbo].[Accounts] 
+ where  [dbo].[Accounts].UserId=@recipientUserId
+
+
+ Update [dbo].[Accounts] Set Balance=Balance-@amount WHERE  [dbo].[Accounts].UserId=@payeeUserId
+ IF (@@error <> 0) ROLLBACK
+ Update [dbo].[Accounts] Set Balance=Balance+@amount WHERE  [dbo].[Accounts].UserId=@recipientUserId
+ IF (@@error <> 0) ROLLBACK
+ Insert INTO AccountTransactions 
+       ([Amount]
+       ,[PayeeBalance]
+       ,[PayeeId]
+       ,[RecipientBalance]
+       ,[RecipientId]
+       ,[TimeOfTransaction])
+  Values (@amount, @payeeBalance, @payeeAccountId, @recipientBalance, @recipientAccountId, GETDATE())
+  IF (@@error <> 0) ROLLBACK
+ COMMIT
+
+
+ GO
+
+             */
+
+            /* 3. вариант с CreateCommand()
+             
+              using (SqlConnection connection = new SqlConnection(""))//ConfigurationManager.ConnectionStrings["MyDatabase"].ConnectionString))
               {
                   connection.Open();
                   SqlTransaction transaction = connection.BeginTransaction();
@@ -140,6 +171,11 @@ namespace PW.Services
             {
                 return "Failed to create account.";
             }
+        }
+
+        public Account GetSystemAccount()
+        {
+            return db.Accounts.FirstOrDefault(o => o.User.Type== DataModel.Enums.UserType.System);
         }
 
         public Account GetAccountById(int accountId)

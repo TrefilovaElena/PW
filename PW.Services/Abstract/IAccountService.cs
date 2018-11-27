@@ -11,6 +11,7 @@ namespace PW.Services
         (AccountTransaction, string) CreateTransaction(int payeeId, int recipientId, decimal amount);
         string OpenNewAccount(User user);
         Account GetAccountOfUser(int userId);
+        Account GetSystemAccount();
         Account GetAccountById(int accountId);
         AccountTransactionsForUser GetModelAccountTransactionsForUser(AccountTransaction transaction, User payee, User recipient,int userId);
     }
